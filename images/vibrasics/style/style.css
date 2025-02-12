@@ -1,0 +1,411 @@
+/* Reset styles */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;outline: 0;font-weight: inherit;font-style: inherit;font-size: 100%;font-family: inherit;vertical-align: baseline;}
+:focus {outline: 0;}
+body {line-height: 1;color: black;}
+ol, ul {list-style: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+caption, th, td {text-align: left;font-weight: normal;}
+blockquote:before, blockquote:after, q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+
+
+/* --------------------------------
+
+ root styles 
+-------------------------------- */
+
+body {
+	font-family: "Verdana", sans-serif;
+	font-size: 10px;
+	color: #53280c;
+	line-height: 16px;
+	background: url(body.jpg);
+}
+
+	p {
+		padding-right: 20px;
+		padding-bottom: 10px;
+	}
+
+		strong {
+			font-weight: bold;
+		}
+
+		em {
+			font-style: italic;
+		}
+
+		big {
+			font-style: normal;
+			font-size: 12px;
+		}
+
+		a:link {
+			color: #bb1810;
+		}
+
+		a:visited {
+			color: #a81710;
+		}
+
+		a:hover {
+			color: #edd1ae;
+		}
+
+
+/* -------- colors:
+text: #53280c
+
+link - red: #bb1810
+visited - dark red: #a81710
+hover - light orange/peach: #edd1ae
+----------------*/
+
+
+
+/* --------------------------------
+
+ TV - main content
+-------------------------------- */
+
+#center {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0.1px;
+}
+	#tv {
+		position: relative;
+		margin-left: -360px;
+		margin-top: -328px;
+		background: url(tv.png) no-repeat;
+		width: 721px;
+		height: 657px;
+	}
+
+
+		#tvscreen {
+			position: absolute;
+			left: 83px;
+			top: 75px;
+			width: 560px;
+			height: 422px;
+		}
+
+
+			h1 { /* side heading */
+				position: relative;
+				margin-left: 34px;
+				margin-top: 33px;
+				width: 38px;
+				height: 363px;
+		}
+
+			#content {
+				position: relative;
+				margin-left: 93px;
+				margin-top: -363px;
+				width: 441px;
+				height: 363px;
+				overflow: auto;
+		}
+
+
+
+/* --------------------------------
+
+ navigation
+-------------------------------- */
+
+		#tvbottom {
+			position: absolute;
+			left: 14px;
+			top: 555px;
+			width: 693px;
+			height: 70px;
+		}
+
+			.blog_nav {background: url(nav_blog.png) 4px 20px no-repeat;}
+			.bio_nav {background: url(nav_bio.png) 4px 20px no-repeat;}
+			.gigs_nav {background: url(nav_gigs.png) 4px 20px no-repeat;}
+			.album_nav {background: url(nav_album.png) 4px 20px no-repeat;}
+			.downloads_nav {background: url(nav_downloads.png) 4px 20px no-repeat;}
+			.gallery_nav {background: url(nav_gallery.png) 4px 20px no-repeat;}
+			.history_nav {background: url(nav_history.png) 4px 20px no-repeat;}
+
+			#navlinks {
+				position: absolute;
+				left: 265px;
+				top: 10px;
+				width: 175px;
+				height: 55px;
+			}
+
+				#navlinks a {
+					display: block;
+					float: left;
+					width: 12px;
+					height: 20px;
+					margin-right: 6px;
+					margin-left: 6px;
+				}
+					a#nav1 {background: url(nav1.png) no-repeat;}
+					a#nav2 {background: url(nav2.png) no-repeat;}
+					a#nav3 {background: url(nav3.png) no-repeat;}
+					a#nav4 {background: url(nav4.png) no-repeat;}
+					a#nav5 {background: url(nav5.png) no-repeat;}
+					a#nav6 {background: url(nav6.png) no-repeat;}
+					a#nav7 {background: url(nav7.png) no-repeat;}
+
+
+					#navlinks a span {
+						display: none;
+					}
+					#navlinks a:hover span {
+						display: inline;
+						position: absolute;
+						left: 4px;
+						top: 20px;
+						width: 175px;
+						height: 33px;
+						overflow: hidden;
+					}
+					#navlinks a.current img {
+						display: inline;
+					}
+
+
+			#navno {
+				position: absolute;
+				left: 450px;
+				top: 8px;
+				width: 73px;
+				height: 55px;
+				background: url(01.png) no-repeat;
+			}
+
+
+			#volume {
+				position: absolute;
+				left: 530px;
+				top: 8px;
+				width: 42px;
+				height: 58px;
+			}
+
+			#channel {
+				position: absolute;
+				left: 579px;
+				top: 8px;
+				width: 42px;
+				height: 58px;
+			}
+
+
+			#powerbutton {
+				position: absolute;
+				left: 628px;
+				top: 5px;
+				width: 62px;
+				height: 62px;
+			}
+
+
+
+/* --------------------------------
+
+ blog/index page styles 
+-------------------------------- */
+
+#wrapper {
+	width: 415px;
+	float: left;
+	clear: none;
+}
+
+.blogcontent {
+	width: 245px;
+	float: left;
+	clear: none;
+}
+
+h6 { /* blog subject headings */
+	font-size: 12px;
+	font-weight: bold;
+	border-bottom: 1px solid #53280c;
+	margin-bottom: 10px;
+}
+
+.blogimage {
+	width: 167px;
+	float: right;
+	clear: none;
+}
+
+.blogdate {
+	width: 415px;
+	height: 15px;
+	float: left;
+	clear: none;
+	font-style: italic;
+	font-size: 11px;
+	text-align: right;
+	border-bottom: 1px dashed #53280c;
+	margin-bottom: 5px;
+	margin-top: 30px;
+}
+
+
+
+/* underlined headings (used in bio, album, downloads, gallery) */
+
+h3 {   
+	width: 205px;
+	border-bottom: 1px solid #53280c;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+
+
+/* --------------------------------
+
+ bio page styles 
+-------------------------------- */
+
+#members {
+	padding-bottom: 10px;
+}
+	#members table td {
+		padding-left: 20px;
+	}
+
+
+
+/* --------------------------------
+
+ album page styles 
+-------------------------------- */
+
+ol {
+	list-style-type: decimal;
+	list-style-position: outside;
+	margin: 5px 0 10px 45px
+}
+
+
+
+/* --------------------------------
+
+ gigs page styles 
+-------------------------------- */
+
+h2 { /* gigs heading  */
+	font-size: 14px;
+	text-align: center;
+	font-weight: bold;
+}
+
+h4 { /* gigs sub heading  */
+	font-size: 12px;
+	text-align: center;
+}
+
+h5 { /* month heading  */
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 12px;
+	border-bottom: 1px solid #53280c;
+	width: 75px;
+	padding-top: 15px;
+	padding-left: 22px;
+}
+
+#gigstable {
+	margin: 6px 10px 10px 0;
+	line-height: 14px;
+}
+
+	td {
+		padding-bottom: 5px;
+	}
+
+	.date {
+		width: 22px;
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+	.details {
+		font-size: 11px;
+	}
+
+	.details p {
+		padding: 0px;
+	}
+
+		.city {
+			font-size: 12px;
+			font-weight: bold;
+		}
+
+		.note {
+			color: #000;
+			font-weight: bold;
+			font-style: italic;
+		}
+
+		.other {
+			font-size: 10px;
+		}
+
+
+
+/* --------------------------------
+
+ gallery page styles 
+-------------------------------- */
+
+.centered {
+	text-align: center;
+}
+
+.galleryimgs {
+	width: 133px;
+	height: 133px;
+	float: left;
+	clear: none;
+	margin-top: 2px;
+	margin-right: 5px;
+	margin-bottom: 3px;
+	text-align: center;
+	line-height: 133px;
+	overflow: hidden;
+}
+
+.gallerybox img {
+	display: inline;
+	vertical-align: middle;
+}
+
+
+
+/* --------------------------------
+
+ history page styles 
+-------------------------------- */
+
+ul {
+	list-style-type: disc;
+	list-style-position: outside;
+	padding: 12px;
+	line-height: 1.5;
+}
+
+	li {
+		padding-bottom: 5px;
+	}
+
+
+

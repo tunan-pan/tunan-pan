@@ -1,0 +1,572 @@
+/* Reset styles */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;outline: 0;font-weight: inherit;font-style: inherit;font-size: 100%;font-family: inherit;vertical-align: baseline;}
+:focus {outline: 0;}
+body {line-height: 1;color: black;}
+ol, ul {list-style: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+caption, th, td {text-align: left;font-weight: normal;}
+blockquote:before, blockquote:after, q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+
+
+
+
+
+/* ------ colors ------
+#F3F2F5 -bg bright orange
+#F36F21 -darker orange
+F75D28 - warmer orange
+
+#344D67 -dark blue
+FFFCF5 - white
+
+--------------------*/
+
+
+/* ----------------------------------
+fonts
+-----------------------------------*/
+
+@font-face
+{
+font-family: Lobster;
+src: url(fonts/LobsterTwo-Italic.ttf);
+}
+
+@font-face
+{
+font-family: Kaffeesatz;
+src: url(fonts/YanoneKaffeesatz-Thin.ttf);
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
+
+
+/* ----------------------------------
+main styles
+-----------------------------------*/
+
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript,
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(loadingicon.gif) center no-repeat #fff;
+}
+
+
+body {
+    background-color: /* FFFCF5 fbf7df fff9eb*/ #fff;
+	font-family: Quicksand, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    color: #344D67;
+}
+
+    strong { font-weight: bold; }
+
+    em { font-style: italic; }
+
+    h1 { font-size: 46px; line-height: 52px; padding-bottom: 20px; } /* h1 = Hi I'm Tunan */
+		em.bigger { font-size: 22px; line-height: 40px; font-weight: 700; }
+
+
+
+h4 { /* project name titles */
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #F75D28;
+  margin-bottom: 10px;
+  line-height: 25px;
+}
+
+
+    ul {
+      list-style: disc outside;
+      padding-left: 20px;
+    }
+      li { padding-top: 8px; }
+
+    a, a:link {
+      text-decoration: none;
+      color: #000;
+			font-weight: bold;
+    }
+    a:visited { color: #000; }
+    a:hover, a:active, a:focus { color: #F75D28; }
+
+
+
+#wrapper {
+  box-sizing: border-box!important;
+	width: 100%;
+	height: 100%;
+  /*background-color: #ccc;*/
+padding-right: 0!important;
+margin-right: 0!important;
+}
+
+
+
+/* ----- triangle thing ---------------*/
+
+.trianglemenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100px;
+  transition: height 0.5s;
+  -webkit-transition: height 1s, width 0.5s, background-color 0.5s;
+  z-index: 999999999999;
+  overflow: hidden;
+  background-color: transparent;
+}
+.trianglemenu:hover {
+  height: 100%;
+  width: 680px;
+  background-color: #FC6C2B;
+}
+.triangle {
+	width: 0;
+	height: 0;
+	border-top: 100px solid #FC6C2B;
+	border-right: 100px solid transparent;
+  z-index: 999999999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+  .trianglemenu img {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    wdith: 23px;
+    height: 24px;
+  }
+  .trianglemenutext {
+    margin: 90px;
+    color: #fff;
+  }
+
+  .trianglemenutext p {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+  .contacttext {
+    margin-top: 40px;
+  }
+  .contacttext span {
+    color: #344D67;
+    padding-bottom: 0;
+    margin: 0 12px;
+    font-size: 20px;
+    }
+    .contacttext span:first-child { margin: 0 12px 0 0; }
+  .contacttext a { text-transform: uppercase; font-weight: normal; }
+  .contacttext a:hover, a:active, a:focus { color: #fff; }
+.contacttext_mobile { display: none; }
+
+
+
+/* ------ return to top ----------------- */
+#return-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    opacity: 1;
+    background: #F75D28;
+    width: 33px;
+    height: 33px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 999999999999;
+}
+#return-to-top i {
+    color: #F75D28;
+    margin: 0;
+    position: relative;
+    left: 9px;
+    top: -7px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 999999999;
+padding: 0;
+
+    width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 8px 12px 8px;
+border-color: transparent transparent #fff transparent;
+}
+#return-to-top:hover {
+    opacity: 1;
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: -10px;
+}
+
+
+
+
+
+
+
+/* ----------------------------------
+fixed menu bar with filtering
+-----------------------------------*/
+
+.fixedmenu_mobile {
+  display: none;
+}
+
+.fixedmenu {
+  position: fixed;
+top: 0;
+	width: 96%;
+  height:150px;
+	z-index:500;
+	outline: 0;
+  text-align: right;
+  padding-right: 5vw;
+  background-color: #fff;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-property: -webkit-transform, top;
+  -moz-transition-property: -moz-transform, top;
+  transition-property: transform, top;
+}
+
+.fixed{
+top: -100px;
+-webkit-transition-duration: 0.4s;
+-moz-transition-duration: 0.4s;
+transition-duration: 0.4s;
+-webkit-transition-property: -webkit-transform, top;
+-moz-transition-property: -moz-transform, top;
+transition-property: transform, top;
+}
+
+
+.portfolioFilteritems {
+  vertical-align: bottom;
+}
+  .portfolioFilter p {
+    display: inline-block;
+       height: 40px;
+       vertical-align: bottom;
+  	color: #344D67;
+  	font-size: 14px;
+  	line-height: 30px;
+  	text-transform: uppercase;
+    margin: 0 5px;
+  position: relative;
+  top: 110px;
+  	}
+  .portfolioFilter a:hover, a:active, a:focus { color: #000; }
+
+
+
+  .portfolioFilter a {
+      margin-right: 10px;
+  	color:#666;
+  	text-decoration:none;
+		font-weight: normal;
+  }
+
+  .portfolioFilter a.current {
+  	color: #F75D28;
+  }
+
+/*
+	.aboutlink {
+		display: inline-block;
+			 height: 40px;
+			 vertical-align: bottom;
+		color: #344D67;
+		font-size: 14px;
+		line-height: 30px;
+		text-transform: uppercase;
+		margin: 0 5px;
+	position: relative;
+	top: 110px;
+		left: 8.5%;
+		float: left;
+		clear: none;
+		font-weight: 300!important;
+	}
+	*/
+
+/* ----------------------------------
+isotopes
+-----------------------------------*/
+#isotopesbox {
+  position: relative;
+	width: 96%;
+  box-sizing: border-box;
+margin: 150px 0 100px 4%;
+/*border: 3px solid #cfc; green*/
+}
+
+.portfolioContainer {
+  position: relative;
+width: 100%!important;
+  /*background-color: #000;*/
+}
+
+
+.isotope-item {
+    z-index: 2;
+  position: relative;
+  width: 100%;
+  max-height: 400px;
+  /*background-color: #fcf; pink*/
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  float: right;
+  clear: both;
+  padding: 20px 0;
+  text-align: right;
+  margin-bottom: 50px;
+}
+
+
+
+
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+    -webkit-transition-duration: 0.6s;
+    -moz-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+}
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
+
+
+
+.portfolioContainer .itemdesc {
+  width: 16%;
+float: left;
+clear: none;
+  margin: 0;
+  max-height: 400px;
+  position: absolute;
+  bottom: 20px;
+  vertical-align: bottom;
+  background-color: #fff;
+  z-index: 200;
+  padding: 0 2%;
+	overflow-y: auto;
+}
+
+
+.portfolioContainer .projectmedium {
+	font-style: italic;
+	margin-top: 10px;
+}
+
+
+
+/* --------------------- carousels -------------------*/
+
+.main-carousel {
+  width: 80%;
+  max-height: 400px;
+  text-align: right;
+  float: right;
+  clear: none;
+  /*background-color: #ccf;*/
+}
+
+
+  .carousel-cell {
+    max-height: 400px;
+    margin: 0;
+    margin-right: 30px;
+    counter-increment: gallery-cell;
+  }
+
+
+
+    .carousel-cell img {
+      padding: 0;
+      margin: 0;
+      float: left;
+      max-height: 400px;
+      vertical-align: center;
+			opacity: 1;
+			-webkit-transition-duration: 0.6s;
+			-moz-transition-duration: 0.6s;
+			transition-duration: 0.6s;
+			-webkit-transition-property: -webkit-transform, opacity;
+			-moz-transition-property: -moz-transform, opacity;
+			transition-property: transform, opacity;
+    }
+			.carousel-cell a:hover img {
+				opacity: 0.86;
+				-webkit-transition-duration: 0.3s;
+				-moz-transition-duration: 0.3s;
+				transition-duration: 0.3s;
+				-webkit-transition-property: -webkit-transform, opacity;
+				-moz-transition-property: -moz-transform, opacity;
+				transition-property: transform, opacity;
+			}
+
+		.border img {
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+		}
+
+
+    /* big buttons, no circle */
+    .flickity-prev-next-button {
+      width: 60px;
+      height: 100%;
+      background: transparent;
+      margin: 0;
+      padding: 0;
+            border-radius: 0;
+
+    }
+    .flickity-prev-next-button:hover {
+      background: #fff;
+      opacity: 0.4;
+    }
+    /* arrow color */
+    .flickity-prev-next-button .arrow {
+      fill: #F75D28;
+    }
+    .flickity-prev-next-button:hover .arrow {
+      fill: #000;
+    }
+    .flickity-prev-next-button.no-svg {
+      color: white;
+    }
+    /* position outside */
+.flickity-prev-next-button.previous {
+  left: 0px;
+}
+.flickity-prev-next-button.next {
+  right: 0px;
+}
+    /* hide disabled button */
+    .flickity-prev-next-button:disabled {
+      display: none;
+    }
+
+
+
+/* ----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+ MOBILE
+ ----------------------------------------------------------------------------
+ ------------------------------------------------------------------------------ */
+
+ @media all and (max-width: 800px)  {
+
+.fixedmenu {
+  top: -100px;
+  height: 230px;
+}
+.fixedmenu p {
+  margin: 0;
+  padding: 0;
+  height: 20px;
+  float: right;
+  clear: both;
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 30px;
+}
+.trianglemenu:hover {
+  width: 88%;
+	height: 100%;
+  overflow-y: scroll;
+  z-index: 9999999999999999;
+}
+.trianglemenutext {
+   margin: 80px 30px 30px;
+   color: #fff;
+ }
+
+ .trianglemenutext p {
+   font-size: 15px;
+   line-height: 20px;
+   margin-bottom: 8px;
+ }
+ .contacttext { display: none; }
+
+.contacttext_mobile { display: inline; text-transform: uppercase; }
+
+	#isotopesbox {
+		margin: 150px 0;
+		width: 100%;
+	}
+
+.isotope-item {
+    z-index: 2;
+	opacity: 1;
+  height: 300px;
+}
+
+.portfolioContainer .itemdesc {
+  width: auto;
+  height: 90px;
+  overflow-y: auto;
+  z-index: 200;
+  text-align: left;
+  margin: 0;
+  padding: 0 20px;
+  top: 240px;
+}
+
+
+
+.portfolioContainer .main-carousel {
+  max-height: 200px;
+  width: 100%;
+}
+
+.carousel-cell, .carousel-cell img {
+	max-height: 200px;
+}
+.carousel-cell { margin-right: 15px; }

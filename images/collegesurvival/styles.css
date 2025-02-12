@@ -1,0 +1,12 @@
+body {
+	background-color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666666;
+}
+
+	#content {
+		width: 800px;
+		height: 500px;
+		margin: 80px auto;
+	}

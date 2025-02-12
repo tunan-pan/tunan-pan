@@ -1,0 +1,15 @@
+#navlinks a {
+	_display: inline;
+}
+#navlinks a:hover {
+	_background-position: 0 0;
+}
+li {
+	_margin-left: 5px;
+}
+h1 img {
+	_behavior: url(iepngfix.htc);
+}
+.gallerybox {
+	font-size: 110px;
+}

@@ -1,0 +1,231 @@
+/* Reset styles */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;outline: 0;font-weight: inherit;font-style: inherit;font-size: 100%;font-family: inherit;vertical-align: baseline;}
+:focus {outline: 0;}
+body {line-height: 1;color: black;}
+ol, ul {list-style: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+caption, th, td {text-align: left;font-weight: normal;}
+blockquote:before, blockquote:after, q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+
+
+
+
+
+/* ------ colors ------
+#F3F2F5 -bg bright orange
+#F36F21 -darker orange
+F75D28 - warmer orange
+
+#344D67 -dark blue
+FFFCF5 - white
+
+--------------------*/
+
+
+/* ----------------------------------
+fonts
+-----------------------------------*/
+
+@font-face
+{
+font-family: Lobster;
+src: url(fonts/LobsterTwo-Italic.ttf);
+}
+
+@font-face
+{
+font-family: Kaffeesatz;
+src: url(fonts/YanoneKaffeesatz-Thin.ttf);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
+
+
+/* ----------------------------------
+main styles 
+-----------------------------------*/
+
+
+body {
+    background-color: /*#FFFCF5*/ #fbf7df /*fff9eb*/;
+	font-family: Quicksand, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #344D67;
+}
+	
+    strong { font-weight: bold; }
+	
+    em, h3 { font-family: Quicksand, serif; font-weight: 700; }    
+		em.bigger { font-size: 25px; line-height: 30px; }
+
+	h3 { font-size: 38px;  line-height: 38px; padding: 15px; } /* h3 = Hi I'm Tunan */
+     
+  
+    ul {
+        list-style: disc outside;
+        padding-left: 20px;
+    }
+        li { padding-top: 8px; }
+            
+    a, a:link {
+        text-decoration: none;
+		color: #344D67;		
+    }
+    a:visited { color: #344D67; }
+    a:hover, a:active, a:focus { color: #F75D28; }
+	
+	.linewhite { 
+		border-top: 1px solid #fff; 
+		width: 160px; 
+		margin: 10px auto;
+		}
+		
+	.textshort { display: inline; }
+	.textlong, .fixedmenu, .fixed,  .lineorange { display: none; }
+
+#wrapper {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+/* ----------------------------------
+header
+-----------------------------------*/
+
+#header { 
+	background-color: #FC6C2B;
+	width: 100%;
+	position: relative;
+	top: 0;
+	height: auto; 
+	padding-bottom: 20px; 
+	margin-bottom: 20px;
+}	
+	#headercontent { 
+		text-align: center;
+		color: #fbf7df;
+		padding: 30px 0 0 0;
+		
+		width: 100%;	
+		background-color: #FC6C2B;
+		font-size: 21px;
+		line-height: 25px;
+		margin: 0;
+		}
+		#header p { padding-bottom: 15px; margin: 0 15px;} 
+		.contacttext span {	
+			color: #344D67; 
+			padding-bottom: 0; 
+			margin: 0 12px; 
+			}
+		.contacttext a:hover, a:active, a:focus { color: #000; }
+		
+#hexagon { display: none; }
+
+
+
+
+
+
+/* ----------------------------------
+fixed menu bar
+-----------------------------------*/
+	
+	.fixedmenusmall { 
+		display: inline; 
+		text-align: center; 
+		margin: 0 auto;
+		}
+	.fixedmenusmall a { 
+		margin: 30px 5px;
+		text-transform: uppercase;
+		padding-bottom: 5px;
+		font-size: 16px;
+		}
+	.fixedmenusmall a:hover { 
+		border-bottom: 1px solid #9A9D9f;
+		}
+
+	.ptextsmall { 
+		background-color: #344D67;
+		display: block;
+		margin: 0 auto;
+		padding: 20px;
+	}
+	.ptextsmall p {
+		font-family: "Century Gothic", sans-serif;
+		font-size: 13px;
+		color: #fff;
+		margin-bottom: 5px;
+		line-height: 18px;
+	}
+	.ptextsmall a { color: #9A9D9f; }
+	.ptextsmall a:hover, a:active, a:focus { color: #F75D28; }
+
+
+
+.portfolioFilter p {
+	color: #344D67;
+	font-size: 20px;
+	line-height: 35px;
+	}
+.portfolioFilter a:hover, a:active, a:focus { color: #F75D28; }
+	
+
+
+/* ----------------------------------
+isotopes
+-----------------------------------*/
+#isotopesbox {
+	margin: 20px 0;
+	width: auto;
+}
+
+.portfolioContainer { 
+	margin: 0 auto;
+	}
+
+.portfolioFilter a { 
+    margin-right: 10px; 
+	color:#666;
+	text-decoration:none;
+}
+
+.portfolioFilter a.current { 
+	color: #000;
+}
+
+.portfolioContainer img {
+    margin: 10px;
+}
+
+.isotope-item {
+    z-index: 2;
+}
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
+
+
+
