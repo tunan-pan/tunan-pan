@@ -1231,6 +1231,9 @@ PROJECTS SECTION
   flex: 1; 
   min-width: 0;
   max-width: 300px;
+  hyphens: auto;
+  overflow-wrap: break-word; 
+  
 }
 
 .tab-note span {
